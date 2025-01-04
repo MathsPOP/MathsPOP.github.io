@@ -69,3 +69,13 @@ body
 a {
     position: relative;
 }
+
+
+.copyright
+{
+    position: fixed;
+    text-align: left;
+    bottom: 0px;
+    width: 100%;
+}
+
