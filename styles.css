@@ -76,10 +76,6 @@ header
     font-size: 16px;
 }
 
-a {
-    position: relative;
-}
-
 .copyright
 {
     position: fixed;
