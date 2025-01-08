@@ -218,6 +218,12 @@ header a
 
 @media (max-width: 450px)
 {
+    .box2
+    {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
     .box3, .box4
     {
         text-align: center;
