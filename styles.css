@@ -116,13 +116,10 @@ header a
     font-size: 23px;
 }
 
-.weekly_puzzle_table
+.weekly_puzzle_table table
 {
-    
     margin-left: auto;
     margin-right: auto;
-    width: 30%;
-
 }
 
 .weekly_puzzle_table td
