@@ -188,7 +188,7 @@ header a
 .box3 p
 {
     margin-left: 10%;
-    width: 25%;
+    width: 40%;
     font-size: 20px;
 }
 
@@ -198,22 +198,44 @@ header a
     padding-bottom: 50px;
     width: 100%;
     box-sizing: border-box;
+    text-align: right;
 }
 
 .box4 h2
 {
     padding-right: 10%;
-    text-align: right;
     font-size: 35px;
 }
 
 .box4 p
 {
-    width: 25%;
+    width: 45%;
     margin-left: auto;
     margin-right: 10%;
-    text-align: right;
     font-size: 20px;
+}
+
+
+@media (max-width: 450px)
+{
+    .box3, .box4
+    {
+        text-align: center;
+    }
+
+    .box3 h2, .box4 h2
+    {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .box3 p, .box4 p
+    {
+        margin-left: 20%;
+        margin-right: 20%;
+
+        width: 60%;
+    }
 }
 
 .copyright
