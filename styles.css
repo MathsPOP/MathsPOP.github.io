@@ -1,4 +1,3 @@
-
 body
 {
     height: 100vh;
@@ -9,34 +8,30 @@ body
 
 header
 {
-    overflow: auto;
-    background-color:#7AEFF4;
+    background-color: #7AEFF4;
     width: 100%;
-    height: 13%;
+    height: 120px;
     opacity: 0.7;
     text-align: center;
     font-weight: bold;
-    font-size: 15px;
+    padding: 25px 0;
+    font-size: 25px;
+    line-height: 0px;
+    z-index: 3000;
+    box-sizing: border-box;
 }
 
-.box2
+header a
 {
-    height: 85%;
-    width: 100%;
-    padding-left: 25%;
-    padding-right: 25%;
-    text-align: center;
-    font-size: 20px;
-    box-sizing: border-box;
-    overflow: auto;
+    color: black;
+    text-decoration: none;
 }
 
 .navbar
 {
-    height: 6vh;
+    height: 60px;
     width: 100%;
     text-align: center;
-    
 }
 
 .navbar ul
@@ -55,7 +50,8 @@ header
 {
     color: white;
     text-decoration: none;
-    padding: 2vh;
+    height: 100%;
+    padding: 16px;
     display: block;
     text-align: center;
     margin-right: 0px;
@@ -73,12 +69,137 @@ header
     border: 0px;
     display: inline-block;
     width: 25%;
-    font-size: 16px;
+    font-size: 23px;
+    height: 60px;
+}
+
+.box2
+{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-left: 25%;
+    margin-right: 25%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.box2 h2
+{
+    font-size: 35px;
+}
+
+.box2 p
+{
+    font-size: 23px;
+}
+
+.weekly_puzzle_table
+{
+    
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+
+}
+
+.weekly_puzzle_table td
+{
+    padding-top: 5px;
+    padding-right: 10px;
+    text-align: center;
+    font-size: 19px;
+}
+
+.weekly_puzzle_table td a
+{
+    text-decoration: none;
+    color: lightskyblue;
+}
+
+
+.puzzles_box
+{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-left: 25%;
+    margin-right: 25%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.puzzles_box h2
+{
+    font-size: 35px;
+}
+
+.puzzles_box p
+{
+    font-size: 23px;
+}
+
+.puzzles_box ul
+{
+    list-style-type: none;
+    font-size: 23px;
+    text-align: center;
+}
+
+.puzzles_box ul a
+{
+    text-decoration: none;
+    color: lightskyblue;
+}
+
+.box3
+{
+    background-color: lightgrey;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.box3 h2
+{
+    margin-left: 10%;
+    font-size: 35px;
+}
+
+.box3 p
+{
+    margin-left: 10%;
+    width: 25%;
+    font-size: 20px;
+}
+
+.box4
+{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.box4 h2
+{
+    padding-right: 10%;
+    text-align: right;
+    font-size: 35px;
+}
+
+.box4 p
+{
+    width: 25%;
+    margin-left: auto;
+    margin-right: 10%;
+    text-align: right;
+    font-size: 20px;
 }
 
 .copyright
 {
-    position: fixed;
+    padding-top: 50px;
     text-align: left;
     bottom: 0px;
     width: 100%;
