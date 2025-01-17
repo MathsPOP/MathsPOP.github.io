@@ -2,29 +2,36 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://MathsPOP.github.io/</loc>
-    <lastmod>2025-01-08</lastmod>
-    <changefreq>daily</changefreq>
+    <lastmod>2025-01-17</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.00</priority>
   </url>
 
   <url>
     <loc>https://MathsPOP.github.io/about/</loc>
-    <lastmod>2025-01-08</lastmod>
-    <changefreq>daily</changefreq>
+    <lastmod>2025-01-17</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.70</priority>
   </url>
 
   <url>
     <loc>https://MathsPOP.github.io/puzzles/</loc>
-    <lastmod>2025-01-08</lastmod>
-    <changefreq>daily</changefreq>
+    <lastmod>2025-01-17</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.00</priority>
   </url>
 
   <url>
+    <loc>https://mathspop.github.io/puzzles/weekly_puzzle/</loc>
+    <lastmod>2025-01-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.00</priority>
+  </url>
+  
+  <url>
     <loc>https://MathsPOP.github.io/contact/</loc>
-    <lastmod>2025-01-08</lastmod>
-    <changefreq>daily</changefreq>
+    <lastmod>2025-01-17</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.60</priority>
   </url>
 </urlset>
