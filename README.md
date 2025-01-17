@@ -1,7 +1,7 @@
-# ThomasWinrowCampbell.github.io
+# MathsPOP.github.io
 
-[https://thomaswinrowcampbell.github.io](https://thomaswinrowcampbell.github.io/)
-[https://thomaswinrowcampbell.github.io/about](https://thomaswinrowcampbell.github.io/about/)
-[https://thomaswinrowcampbell.github.io/contact](https://thomaswinrowcampbell.github.io/contact/)
-[https://thomaswinrowcampbell.github.io/puzzles](https://thomaswinrowcampbell.github.io/puzzles/)
-[https://thomaswinrowcampbell.github.io/puzzles/weekly_puzzle](https://thomaswinrowcampbell.github.io/puzzles/weekly_puzzle)
+[https://MathsPOP.github.io](https://MathsPOP.github.io/)
+[https://MathsPOP.github.io/about](https://MathsPOP.github.io/about/)
+[https://MathsPOP.github.io/contact](https://MathsPOP.github.io/contact/)
+[https://MathsPOP.github.io/puzzles](https://MathsPOP.github.io/puzzles/)
+[https://MathsPOP.github.io/puzzles/weekly_puzzle](https://MathsPOP.github.io/puzzles/weekly_puzzle)
