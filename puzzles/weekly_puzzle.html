@@ -40,172 +40,34 @@
             </div>
             
             <div class="weekly_puzzle_table">
-                <table>
+                <table id="puzzle_table">
                     <tr>
-                        <td>
-                            Weekly Puzzle 1
-                        </td>
-
-                        <td>
-                            <a href="../puzzle_pdfs/weekly_puzzle/WP 1.pdf" download="WP 1.pdf">
-                                Question Paper
-                            </a>
-                        </td>
-
-                        <td>
-                            <a href="../puzzle_pdfs/weekly_puzzle/WP 1S.pdf" download="WP 1S.pdf">
-                                Solutions
-                            </a>
-                        </td>
+                        <th>Puzzle Name</th>
+                        <th>Question Paper</th>
+                        <th>Solutions</th>
                     </tr>
-
-                    <tr>
-                        <td>
-                            Weekly Puzzle 2
-                        </td>
-
-                        <td>
-                            <a href="../puzzle_pdfs/weekly_puzzle/WP 2.pdf" download="WP 2.pdf">
-                                Question Paper
-                            </a>
-                        </td>
-
-                        <td>
-                            <a href="../puzzle_pdfs/weekly_puzzle/WP 2S.pdf" download="WP 2S.pdf">
-                                Solutions
-                            </a>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            Weekly Puzzle 3
-                        </td>
-
-                        <td>
-                            <a href="../puzzle_pdfs/weekly_puzzle/WP 3.pdf" download="WP 3.pdf">
-                                Question Paper
-                            </a>
-                        </td>
-
-                        <td>
-                            <a href="../puzzle_pdfs/weekly_puzzle/WP 3S.pdf" download="WP 3S.pdf">
-                                Solutions
-                            </a>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            Weekly Puzzle 4
-                        </td>
-
-                        <td>
-                            <a href="../puzzle_pdfs/weekly_puzzle/WP 4.pdf" download="WP 4.pdf">
-                                Question Paper
-                            </a>
-                        </td>
-
-                        <td>
-                            <a href="../puzzle_pdfs/weekly_puzzle/WP 4S.pdf" download="WP 4S.pdf">
-                                Solutions
-                            </a>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            Weekly Puzzle 5
-                        </td>
-
-                        <td>
-                            <a href="../puzzle_pdfs/weekly_puzzle/WP 5.pdf" download="WP 5.pdf">
-                                Question Paper
-                            </a>
-                        </td>
-
-                        <td>
-                            <a href="../puzzle_pdfs/weekly_puzzle/WP 5S.pdf" download="WP 5S.pdf">
-                                Solutions
-                            </a>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            Weekly Puzzle 6
-                        </td>
-
-                        <td>
-                            <a href="../puzzle_pdfs/weekly_puzzle/WP 6.pdf" download="WP 6.pdf">
-                                Question Paper
-                            </a>
-                        </td>
-
-                        <td>
-                            <a href="../puzzle_pdfs/weekly_puzzle/WP 6S.pdf" download="WP 6S.pdf">
-                                Solutions
-                            </a>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            Weekly Puzzle 7
-                        </td>
-
-                        <td>
-                            <a href="../puzzle_pdfs/weekly_puzzle/WP 7.pdf" download="WP 7.pdf">
-                                Question Paper
-                            </a>
-                        </td>
-
-                        <td>
-                            <a href="../puzzle_pdfs/weekly_puzzle/WP 7S.pdf" download="WP 7S.pdf">
-                                Solutions
-                            </a>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            Weekly Puzzle 8
-                        </td>
-
-                        <td>
-                            <a href="../puzzle_pdfs/weekly_puzzle/WP 8.pdf" download="WP 8.pdf">
-                                Question Paper
-                            </a>
-                        </td>
-
-                        <td>
-                            <a href="../puzzle_pdfs/weekly_puzzle/WP 8S.pdf" download="WP 8S.pdf">
-                                Solutions
-                            </a>
-                        </td>
-                    </tr>
-                    
-                    <tr>
-                        <td>
-                            Weekly Puzzle 9
-                        </td>
-
-                        <td>
-                            <a href="../puzzle_pdfs/weekly_puzzle/WP 9.pdf" download="WP 9.pdf">
-                                Question Paper
-                            </a>
-                        </td>
-
-                        <td>
-                            Coming Soon!
-                        </td>
-                    </tr>
-
-                    
-
-    
-                    
                 </table>
+
+                <script>
+                    const puzzle_table = document.getElementById("puzzle_table");
+                    const total_puzzles = 10;
+
+                    for (let i = 1; i <= total_puzzles; i++)
+                    {
+                        let row = document.createElemen("tr");
+
+                        row.innerHTML = `
+                            <td>Weekly Puzzle ${i}</td>
+                            <td><a href="../puzzle_pdfs/weekly_puzzle/WP ${i}.pdf" download="WP ${i}.pdf">Question Paper</a></td>
+                            <td><a href="../puzzle_pdfs/weekly_puzzle/WP ${i}S.pdf" download="WP ${i}S.pdf">Solutions</a></td>
+                        `;
+
+                        puzzle_table.appendChild(row);
+                    }
+
+                    
+                </script>
+
             </div>
         </main>
 
