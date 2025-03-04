@@ -56,17 +56,17 @@
 
                         const fs = require('fs');
 
-                        fs.access("../puzzle_pdfs/weekly_puzzle/WP ${i}.pdf"), fs.constants.F_OK, (err) => {
+                        fs.access("../puzzle_pdfs/weekly_puzzle/WP ${i}.pdf", fs.constants.F_OK, (err) => {
                             if (!err) {
                                 question_paper_found = true;
                             }
-                        };
+                        });
 
-                        fs.access("../puzzle_pdfs/weekly_puzzle/WP ${i}S.pdf"), fs.constants.F_OK, (err) => {
+                        fs.access("../puzzle_pdfs/weekly_puzzle/WP ${i}S.pdf", fs.constants.F_OK, (err) => {
                             if (!err) {
                                 solutions_found = true;
                             }
-                        };
+                        });
 
                         if (question_paper_found && solutions_found) {
                             row.innerHTML = `
