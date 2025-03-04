@@ -44,6 +44,17 @@
                 </table>
 
                 <script>
+    
+                    function check_file_exists(url)
+                    {
+                        fetch(url, { method: 'HEAD' }).then(response => {
+                            if (response.ok) {
+                                return true;
+                            } else {
+                                return false;
+                            }
+                    }
+                    
                     const puzzle_table = document.getElementById("puzzle_table");
                     const total_puzzles = 9;
 
@@ -51,23 +62,10 @@
                     {
                         let row = document.createElement("tr");
 
-                        let question_paper_found = false;
-                        let solutions_found = false;
+                        let question_paper_found = check_file_exists("../puzzle_pdfs/weekly_puzzle/WP ${i}.pdf");
+                        let solutions_found = check_file_exists("../puzzle_pdfs/weekly_puzzle/WP ${i}S.pdf");
 
-                        const fs = require('fs');
-
-                        fs.access("../puzzle_pdfs/weekly_puzzle/WP ${i}.pdf", fs.constants.F_OK, (err) => {
-                            if (!err) {
-                                question_paper_found = true;
-                            }
-                        });
-
-                        fs.access("../puzzle_pdfs/weekly_puzzle/WP ${i}S.pdf", fs.constants.F_OK, (err) => {
-                            if (!err) {
-                                solutions_found = true;
-                            }
-                        });
-
+                    
                         if (question_paper_found && solutions_found) {
                             row.innerHTML = `
                                 <td>Weekly Puzzle ${i}</td>
