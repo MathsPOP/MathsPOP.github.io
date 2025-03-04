@@ -41,26 +41,74 @@
             
             <div class="weekly_puzzle_table">
                 <table id="puzzle_table">
-                    <tr>
-                        <th>Puzzle Name</th>
-                        <th>Question Paper</th>
-                        <th>Solutions</th>
-                    </tr>
                 </table>
 
                 <script>
                     const puzzle_table = document.getElementById("puzzle_table");
-                    const total_puzzles = 10;
+                    const total_puzzles = 9;
 
                     for (let i = 1; i <= total_puzzles; i++)
                     {
-                        let row = document.createElement("tr");
+                        let row = document.createElemen("tr");
 
-                        row.innerHTML = `
-                            <td>Weekly Puzzle ${i}</td>
-                            <td><a href="../puzzle_pdfs/weekly_puzzle/WP ${i}.pdf" download="WP ${i}.pdf">Question Paper</a></td>
-                            <td><a href="../puzzle_pdfs/weekly_puzzle/WP ${i}S.pdf" download="WP ${i}S.pdf">Solutions</a></td>
-                        `;
+                        let question_paper_found = false;
+                        let solutions_found = false;
+
+                        const fs = require('fs');
+
+                        fs.access("../puzzle_pdfs/weekly_puzzle/WP ${i}.pdf"), fs.constants.F_OK, (err) => {
+                            if (!err) {
+                                question_paper_found = true;
+                            }
+                        });
+
+                        fs.access("../puzzle_pdfs/weekly_puzzle/WP ${i}S.pdf"), fs.constants.F_OK, (err) => {
+                            if (!err) {
+                                solutions_found = true;
+                            }
+                        });
+
+                        if (question_paper_found && solutions_found) {
+                            row.innerHTML = `
+                                <td>Weekly Puzzle ${i}</td>
+
+                            
+                                <td><a href="../puzzle_pdfs/weekly_puzzle/WP ${i}.pdf" download="WP ${i}.pdf">Question Paper</a></td>
+                                <td><a href="../puzzle_pdfs/weekly_puzzle/WP ${i}S.pdf" download="WP ${i}S.pdf">Solutions</a></td>
+                            `;
+                        }
+
+                        if (question_paper_found && !solutions_found) {
+                            row.innerHTML = `
+                                <td>Weekly Puzzle ${i}</td>
+
+                            
+                                <td><a href="../puzzle_pdfs/weekly_puzzle/WP ${i}.pdf" download="WP ${i}.pdf">Question Paper</a></td>
+                                <td><a href="../puzzle_pdfs/weekly_puzzle/WP ${i}S.pdf" download="WP ${i}S.pdf">Coming soon!</a></td>
+                            `;
+                        }
+
+                        if (!question_paper_found && solutions_found) {
+                            row.innerHTML = `
+                                <td>Weekly Puzzle ${i}</td>
+
+                            
+                                <td><a href="../puzzle_pdfs/weekly_puzzle/WP ${i}.pdf" download="WP ${i}.pdf">Coming soon!</a></td>
+                                <td><a href="../puzzle_pdfs/weekly_puzzle/WP ${i}S.pdf" download="WP ${i}S.pdf">Solutions</a></td>
+                            `;
+                        }
+
+                        if (!question_paper_found && !solutions_found) {
+                            row.innerHTML = `
+                                <td>Weekly Puzzle ${i}</td>
+
+                            
+                                <td><a href="../puzzle_pdfs/weekly_puzzle/WP ${i}.pdf" download="WP ${i}.pdf">Coming soon!</a></td>
+                                <td><a href="../puzzle_pdfs/weekly_puzzle/WP ${i}S.pdf" download="WP ${i}S.pdf">Coming soon!</a></td>
+                            `;
+                        }
+                        
+                        
 
                         puzzle_table.appendChild(row);
                     }
