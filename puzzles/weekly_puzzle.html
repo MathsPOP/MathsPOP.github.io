@@ -45,15 +45,10 @@
 
                 <script>
     
-                    function check_file_exists(url)
+                    async function check_file_exists(url)
                     {
-                        fetch(url, { method: 'HEAD' }).then(response => {
-                            if (response.ok) {
-                                return true;
-                            } else {
-                                return false;
-                            }
-                        });
+                        const reponse = await fetch(url, { method: 'HEAD' });
+                        return response.ok;
                     }
                     
                     const puzzle_table = document.getElementById("puzzle_table");
@@ -63,8 +58,8 @@
                     {
                         let row = document.createElement("tr");
 
-                        let question_paper_found = check_file_exists("../puzzle_pdfs/weekly_puzzle/WP ${i}.pdf");
-                        let solutions_found = check_file_exists("../puzzle_pdfs/weekly_puzzle/WP ${i}S.pdf");
+                        let question_paper_found = await check_file_exists("../puzzle_pdfs/weekly_puzzle/WP ${i}.pdf");
+                        let solutions_found = await check_file_exists("../puzzle_pdfs/weekly_puzzle/WP ${i}S.pdf");
 
                     
                         if (question_paper_found && solutions_found) {
