@@ -60,13 +60,13 @@
                             if (!err) {
                                 question_paper_found = true;
                             }
-                        });
+                        };
 
                         fs.access("../puzzle_pdfs/weekly_puzzle/WP ${i}S.pdf"), fs.constants.F_OK, (err) => {
                             if (!err) {
                                 solutions_found = true;
                             }
-                        });
+                        };
 
                         if (question_paper_found && solutions_found) {
                             row.innerHTML = `
@@ -84,7 +84,7 @@
 
                             
                                 <td><a href="../puzzle_pdfs/weekly_puzzle/WP ${i}.pdf" download="WP ${i}.pdf">Question Paper</a></td>
-                                <td><a href="../puzzle_pdfs/weekly_puzzle/WP ${i}S.pdf" download="WP ${i}S.pdf">Coming soon!</a></td>
+                                <td><a href="../puzzle_pdfs/weekly_puzzle/WP ${i}S.pdf" download="WP ${i}S.pdf">Coming Soon!</a></td>
                             `;
                         }
 
@@ -93,7 +93,7 @@
                                 <td>Weekly Puzzle ${i}</td>
 
                             
-                                <td><a href="../puzzle_pdfs/weekly_puzzle/WP ${i}.pdf" download="WP ${i}.pdf">Coming soon!</a></td>
+                                <td><a href="../puzzle_pdfs/weekly_puzzle/WP ${i}.pdf" download="WP ${i}.pdf">Coming Soon!</a></td>
                                 <td><a href="../puzzle_pdfs/weekly_puzzle/WP ${i}S.pdf" download="WP ${i}S.pdf">Solutions</a></td>
                             `;
                         }
@@ -103,8 +103,8 @@
                                 <td>Weekly Puzzle ${i}</td>
 
                             
-                                <td><a href="../puzzle_pdfs/weekly_puzzle/WP ${i}.pdf" download="WP ${i}.pdf">Coming soon!</a></td>
-                                <td><a href="../puzzle_pdfs/weekly_puzzle/WP ${i}S.pdf" download="WP ${i}S.pdf">Coming soon!</a></td>
+                                <td><a href="../puzzle_pdfs/weekly_puzzle/WP ${i}.pdf" download="WP ${i}.pdf">Coming Soon!</a></td>
+                                <td><a href="../puzzle_pdfs/weekly_puzzle/WP ${i}S.pdf" download="WP ${i}S.pdf">Coming Soon!</a></td>
                             `;
                         }
                         
