@@ -47,8 +47,12 @@
     
                     async function check_file_exists(url)
                     {
-                        const response = await fetch(url, { method: 'HEAD' });
-                        return response.ok;
+                        try {
+                            const response = await fetch(url, { method: 'HEAD' });
+                            return response.ok;
+                        } catch (error) {
+                            return false;
+                        }
                     }
                     
                     const puzzle_table = document.getElementById("puzzle_table");
