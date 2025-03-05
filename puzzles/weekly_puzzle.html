@@ -74,13 +74,17 @@
 
                     let i = 1;
                     
-                    while (question_paper_found || solutions_found)
+                    while (true)
                     {
                         let row = document.createElement("tr");
 
                         question_paper_found = check_file_exists(`../puzzle_pdfs/weekly_puzzle/WP ${i}.pdf`);
                         solutions_found = check_file_exists(`../puzzle_pdfs/weekly_puzzle/WP ${i}S.pdf`);
 
+                        if (!question_paper_found && !solutions_found)
+                        {
+                            break;
+                        }
                     
                         if (question_paper_found && solutions_found) {
                             row.innerHTML = `
