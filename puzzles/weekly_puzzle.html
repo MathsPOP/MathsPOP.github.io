@@ -45,12 +45,24 @@
 
                 <script type="module">
     
-                    async function check_file_exists(url)
+                    async function check_file_exists2(url)
                     {
                         try {
                             const response = await fetch(url, { method: 'HEAD' });
                             return response.ok;
                         } catch (error) {
+                            return false;
+                        }
+                    }
+
+                    function check_file_exists(url)
+                    {
+                        var http = new XMLHttpRequest();
+                        http.open('HEAD', url, false);
+                        http.send();
+                        if (http.status === 200) {
+                            return true;
+                        } else {
                             return false;
                         }
                     }
@@ -62,8 +74,8 @@
                     {
                         let row = document.createElement("tr");
 
-                        let question_paper_found = await check_file_exists(`../puzzle_pdfs/weekly_puzzle/WP ${i}.pdf`);
-                        let solutions_found = await check_file_exists(`../puzzle_pdfs/weekly_puzzle/WP ${i}S.pdf`);
+                        let question_paper_found = check_file_exists(`../puzzle_pdfs/weekly_puzzle/WP ${i}.pdf`);
+                        let solutions_found = check_file_exists(`../puzzle_pdfs/weekly_puzzle/WP ${i}S.pdf`);
 
                     
                         if (question_paper_found && solutions_found) {
