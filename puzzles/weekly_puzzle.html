@@ -70,13 +70,22 @@
                     const puzzle_table = document.getElementById("puzzle_table");
                     const total_puzzles = 9;
 
-                    for (let i = 1; i <= total_puzzles; i++)
+                    let question_paper_found = true;
+                    let solutions_found = true;
+
+                    let i = 0;
+                    
+                    for (while question_paper_found || solutions_found)
                     {
                         let row = document.createElement("tr");
 
-                        let question_paper_found = check_file_exists(`../puzzle_pdfs/weekly_puzzle/WP ${i}.pdf`);
-                        let solutions_found = check_file_exists(`../puzzle_pdfs/weekly_puzzle/WP ${i}S.pdf`);
+                        question_paper_found = check_file_exists(`../puzzle_pdfs/weekly_puzzle/WP ${i}.pdf`);
+                        solutions_found = check_file_exists(`../puzzle_pdfs/weekly_puzzle/WP ${i}S.pdf`);
 
+                        if (question_paper_found || solutions_found)
+                        {
+            
+                        }
                     
                         if (question_paper_found && solutions_found) {
                             row.innerHTML = `
@@ -94,7 +103,7 @@
 
                             
                                 <td><a href="../puzzle_pdfs/weekly_puzzle/WP ${i}.pdf" download="WP ${i}.pdf">Question Paper</a></td>
-                                <td><a href="../puzzle_pdfs/weekly_puzzle/WP ${i}S.pdf" download="WP ${i}S.pdf">Coming Soon!</a></td>
+                                <td>Coming Soon!</td>
                             `;
                         }
 
@@ -103,24 +112,16 @@
                                 <td>Weekly Puzzle ${i}</td>
 
                             
-                                <td><a href="../puzzle_pdfs/weekly_puzzle/WP ${i}.pdf" download="WP ${i}.pdf">Coming Soon!</a></td>
+                                <td>Coming Soon!</td>
                                 <td><a href="../puzzle_pdfs/weekly_puzzle/WP ${i}S.pdf" download="WP ${i}S.pdf">Solutions</a></td>
-                            `;
-                        }
-
-                        if (!question_paper_found && !solutions_found) {
-                            row.innerHTML = `
-                                <td>Weekly Puzzle ${i}</td>
-
-                            
-                                <td><a href="../puzzle_pdfs/weekly_puzzle/WP ${i}.pdf" download="WP ${i}.pdf">Coming Soon!</a></td>
-                                <td><a href="../puzzle_pdfs/weekly_puzzle/WP ${i}S.pdf" download="WP ${i}S.pdf">Coming Soon!</a></td>
                             `;
                         }
                         
                         
 
                         puzzle_table.appendChild(row);
+
+                        i += 1;
                     }
 
                     
